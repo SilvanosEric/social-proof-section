@@ -3,3 +3,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .hero__ratings {
+    --flow-space: 2.5rem;
+  }
+
+  .hero__rating {
+    --flow-space: 1rem;
+  }
+
+  .hero__rating-copy {
+    --flow-space: .25rem;
+  }
+
+  .testimonials {
+    --flow-space: 2.75rem;
+  }
+
+  .card {
+    background-color: theme("colors.p-very-dark-magenta");
+    border-radius: theme("borderRadius.lg");
+    padding-inline: theme("padding.6");
+    padding-top: theme("padding.9");
+    padding-bottom: theme("padding.7");
+    --flow-space: 1rem;
+  }
+
+  .card__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card__figure {
+    max-width: 2.5rem;
+  }
+
+  .card__img {
+    border-radius: theme("borderRadius.full");
+  }
+
+  .card__headings {
+    font-size: theme("fontSize.base");
+  }
+
+  .card__title {
+    font-weight: bold;
+    color: theme("colors.n-light-grayish-magenata");
+  }
+
+  .card__subtitle {
+    font-weight: 500;
+    color: theme("colors.p-very-soft-pink");
+  }
+
+  .card__copy {
+    color: theme("colors.n-light-grayish-magenata");
+    font-weight: 500;
+    font-size: theme("fontSize.base");
+    padding-inline: theme("padding.4");
+  }
+}
+
+@layer utilities {
+  .flow > :where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1.5rem);
+  }
+}
