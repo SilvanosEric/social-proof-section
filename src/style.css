@@ -39,10 +39,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
-
-    .testimonials .card {
-      --flow-space: 0;
-    }
   }
 
   .card {
@@ -52,6 +48,13 @@
     padding-top: theme("padding.9");
     padding-bottom: theme("padding.7");
     --flow-space: 1rem;
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .card {
+      --flow-space: 0;
+      padding-bottom: theme("padding.9");
+    }
   }
 
   .card__header {
@@ -86,7 +89,13 @@
     color: theme("colors.n-light-grayish-magenata");
     font-weight: 500;
     font-size: theme("fontSize.base");
-    padding-inline: theme("padding.4");
+    padding-inline: theme("padding.2");
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .card__copy {
+      --flow-space: 1rem;
+    }
   }
 }
 
