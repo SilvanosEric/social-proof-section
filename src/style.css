@@ -14,11 +14,35 @@
   }
 
   .hero__rating-copy {
-    --flow-space: .25rem;
+    --flow-space: 0.25rem;
   }
 
   .testimonials {
     --flow-space: 2.75rem;
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .hero__rating {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: theme("maxWidth.md");
+    }
+
+    .hero__rating-figure {
+      margin-left: 2rem;
+    }
+
+    .testimonials {
+      --flow-space: 4.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .testimonials .card {
+      --flow-space: 0;
+    }
   }
 
   .card {
