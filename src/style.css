@@ -100,12 +100,13 @@ body {
   background-image: url(images/bg-pattern-top-mobile.svg),
     url("images/bg-pattern-bottom-mobile.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: left top, right center;
+  background-position: left top, left bottom;
 }
 
 @media (min-width: theme("screens.xl")) {
   body {
     background-image: url(images/bg-pattern-top-desktop.svg),
       url(images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right top;
   }
 }
